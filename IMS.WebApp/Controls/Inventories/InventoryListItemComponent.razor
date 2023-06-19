@@ -1,4 +1,6 @@
-﻿
+﻿@inject NavigationManager NavigationManager
+
+
 @if (Inventories != null && Inventories.Count > 0)
 {
     foreach (var inventory in Inventories)
@@ -8,7 +10,10 @@
             <td>@inventory.Quantity</td>
             <td>@inventory.Price.ToString("c")</td>
             <td>
-                <button class="btn btn-light">Edit</button>
+                <button 
+                    type="button" 
+                    class="btn btn-light"
+                    @onclick="@(() => EditInventory(inventory.InventoryId))">Edit</button>
             </td>
         </tr>
     }
@@ -17,5 +22,10 @@
 @code {
     [Parameter]
     public List<Inventory> Inventories { get; set; } = new List<Inventory>();
+
+    private void EditInventory(int inventoryId)
+    {
+        NavigationManager.NavigateTo($"/editinventory/{inventoryId}");
+    }
 
 }
