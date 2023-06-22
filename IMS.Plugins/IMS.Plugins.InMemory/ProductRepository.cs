@@ -15,18 +15,20 @@ namespace IMS.Plugins.InMemory
         {
             _products = new List<Product>()
                 {
-                    new Product { ProductId = 1, ProductName = "Bike Seat", Quantity = 10, Price = 2 },
-                    new Product { ProductId = 2, ProductName = "Bike Body", Quantity = 10, Price = 15 },
-                    new Product { ProductId = 3, ProductName = "Bike Wheels", Quantity = 20, Price = 8 },
-                    new Product { ProductId = 4, ProductName = "Bike Pedals", Quantity = 20, Price = 1 },
+                    new Product { ProductId = 1, ProductName = "Bike", Quantity = 10, Price = 150 },
+                    new Product { ProductId = 2, ProductName = "Car", Quantity = 10, Price = 25000 },
                 };
             
         }
 
 
-        public Task<IEnumerable<Product>> GetProductByNameAsync(string name)
+        public async Task<IEnumerable<Product>> GetProductByNameAsync(string name)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(name)) return await Task.FromResult(_products);
+
+            var products = _products.Where(x => x.ProductName.Contains(name, StringComparison.OrdinalIgnoreCase));
+
+            return products;
         }
 
    }

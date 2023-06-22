@@ -2,6 +2,8 @@ using IMS.Plugins.InMemory;
 using IMS.UseCases.Inventories;
 using IMS.UseCases.Inventories.Interfaces;
 using IMS.UseCases.PluginInterfaces;
+using IMS.UseCases.Products;
+using IMS.UseCases.Products.ProductInterfaces;
 using IMS.WebApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +18,8 @@ builder.Services.AddTransient<IViewInventoryByNameUseCase, ViewInventoryByNameUs
 builder.Services.AddTransient<IAddInventoryUseCase, AddInventoryUseCase>();
 builder.Services.AddTransient<IEditInventoryUseCase, EditInventoryUseCase>();
 builder.Services.AddTransient<IViewInventoryByIdUseCase, ViewInventoryByIdUseCase>();
+
+builder.Services.AddTransient<IViewProductsByNameUseCase, ViewProductsByNameUseCase>();
 
 var app = builder.Build();
 
