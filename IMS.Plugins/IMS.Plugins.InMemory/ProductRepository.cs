@@ -1,10 +1,6 @@
 ﻿using IMS.CoreBusiness;
 using IMS.UseCases.PluginInterfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace IMS.Plugins.InMemory
 {
@@ -18,7 +14,7 @@ namespace IMS.Plugins.InMemory
                     new Product { ProductId = 1, ProductName = "Bike", Quantity = 10, Price = 150 },
                     new Product { ProductId = 2, ProductName = "Car", Quantity = 10, Price = 25000 },
                 };
-            
+
         }
 
 
@@ -31,6 +27,6 @@ namespace IMS.Plugins.InMemory
             return products;
         }
 
-   }
-   
+    }
+
 }
