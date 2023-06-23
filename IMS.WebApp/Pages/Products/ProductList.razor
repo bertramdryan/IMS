@@ -1,10 +1,30 @@
 ﻿@page "/products"
+@inject NavigationManager NavigationManger
+
 @using IMS.WebApp.Controls.Products
 
 <h3>Product List</h3>
 <br />
-<SearchProductComponent />
+<SearchProductComponent OnSearchProduct="OnSearchProduct"/>
+<br />
+
+<ProductListComponent SearchTerm="@searchTerm"/>
+
+<br />
+<button type="button" 
+    class="btn btn-primary"
+    @onclick="AddProduct">Add Product</button>
 
 @code {
+    private string searchTerm = string.Empty;
 
+    private void OnSearchProduct(string searchTerm)
+    {
+        this.searchTerm = searchTerm;
+    }
+
+    private void AddProduct()
+    {
+        NavigationManger.NavigateTo("/addproduct");
+    }
 }

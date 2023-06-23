@@ -13,10 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IMS.Plugins", "IMS.Plugins"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMS.Plugins.InMemory", "IMS.Plugins\IMS.Plugins.InMemory\IMS.Plugins.InMemory.csproj", "{BFDC2E21-85C2-43F5-A6ED-8791C1E4E7F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS.WebAPI", "IMS.WebAPI\IMS.WebAPI.csproj", "{B57FF3BD-F656-4C86-8E13-6892F1FC0885}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS.Mobile", "IMS.Mobile\IMS.Mobile.csproj", "{01EB9BEA-4F0F-42DF-B991-43870BE64F57}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,14 +35,6 @@ Global
 		{BFDC2E21-85C2-43F5-A6ED-8791C1E4E7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFDC2E21-85C2-43F5-A6ED-8791C1E4E7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFDC2E21-85C2-43F5-A6ED-8791C1E4E7F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B57FF3BD-F656-4C86-8E13-6892F1FC0885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B57FF3BD-F656-4C86-8E13-6892F1FC0885}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B57FF3BD-F656-4C86-8E13-6892F1FC0885}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B57FF3BD-F656-4C86-8E13-6892F1FC0885}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01EB9BEA-4F0F-42DF-B991-43870BE64F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01EB9BEA-4F0F-42DF-B991-43870BE64F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01EB9BEA-4F0F-42DF-B991-43870BE64F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01EB9BEA-4F0F-42DF-B991-43870BE64F57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,6 +17,17 @@ namespace IMS.Plugins.InMemory
 
         }
 
+        public Task AddProductAsync(Product product)
+        {
+            if (_products.Any(x => x.ProductName.Equals(product.ProductName, StringComparison.OrdinalIgnoreCase)))
+                return Task.CompletedTask;
+
+            var maxId = _products.Max(x => x.ProductId);
+            product.ProductId = maxId + 1;
+            _products.Add(product);
+
+            return Task.CompletedTask;
+        }
 
         public async Task<IEnumerable<Product>> GetProductByNameAsync(string name)
         {
